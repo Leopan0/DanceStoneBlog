@@ -1,4 +1,9 @@
-安装 VuePress Theme Hope:
+---
+icon: edit
+---
+
+
+# 安装 VuePress Theme Hope:
 
 ::: code-tabs#shell
 

@@ -1,28 +1,11 @@
+//vuepress配置
 import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
-import { mdEnhancePlugin } from "vuepress-plugin-md-enhance";
+import { searchProPlugin } from "vuepress-plugin-search-pro";
+import { searchPlugin } from '@vuepress/plugin-search'
 
 export default defineUserConfig({
   base: "/",
-  plugins: [
-    //markdown增强
-    mdEnhancePlugin({
-      //代码选项卡
-      tabs: true, codetabs: true,
-      sub:true, sup:true,
-      //开起自定义对齐
-      align:true,
-      //css属性
-      attrs:false,
-      mark:true,
-      //图片 详情查看
-      imgLazyload:true,
-      imgMark:true,
-      //markdown 卡片
-      card:true,
-
-    }),
-  ],
   locales: {
     "/": {
       lang: "zh-CN",
@@ -36,9 +19,26 @@ export default defineUserConfig({
       description: "A blog demo for vuepress-theme-hope",
     }
   },
-
+  //主题
   theme,
-
-  // Enable it with pwa
-  // shouldPrefetch: false,
+  //其他插件
+  plugins: [searchProPlugin({
+    // 索引全部内容
+    indexContent: false,
+    // 为分类和标签添加索引
+    customFields: [
+      {
+        getter: (page) => page.frontmatter.category,
+        formatter: "分类：$content",
+      },
+      {
+        getter: (page) => page.frontmatter.tag,
+        formatter: "标签：$content",
+      },
+    ],
+  }),
+  searchPlugin({
+    //排除首页
+    isSearchable: (page) => page.path !== '/',
+  }),]
 });
