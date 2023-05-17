@@ -9,8 +9,8 @@ export default hopeTheme({
   hostname: "https://mister-hope.github.io",
 
   author: {
-    name: "Mr.Hope",
-    url: "https://mrhope.site",
+    name: "会跳舞的石头",
+    url: "https://github.com/Leopan0/DanceStoneBlog",
   },
 
   iconAssets: "iconfont",
@@ -71,12 +71,12 @@ export default hopeTheme({
       displayFooter: true,
 
       blog: {
-        description: "A FrontEnd programmer",
+        description: "一个个人博客",
         intro: "/intro.html",
       },
 
       metaLocales: {
-        editLink: "Edit this page on GitHub",
+        editLink: "Github上查看",
       },
     },
 
@@ -95,7 +95,7 @@ export default hopeTheme({
       displayFooter: true,
 
       blog: {
-        description: "一个前端开发者",
+        description: "一个后端开发者",
         intro: "/zh/intro.html",
       },
 
