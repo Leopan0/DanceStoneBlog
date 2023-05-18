@@ -12,12 +12,6 @@ export default defineUserConfig({
       title: "会跳舞的石头",
       description: "代码在指尖飞舞",
     },
-
-    "/en/": {
-      lang: "en-US",
-      title: "Blog Demo",
-      description: "A blog demo for vuepress-theme-hope",
-    }
   },
   //主题
   theme,

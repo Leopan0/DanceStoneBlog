@@ -47,7 +47,7 @@ export default hopeTheme({
       copyright : "MIT Licensed | Copyright <a href='https://github.com/Leopan0'>会跳舞的石头</a>",
 
       blog: {
-        description: "一个博客",
+        description: "站点简介",
         intro: "/intro.html",
       },
 

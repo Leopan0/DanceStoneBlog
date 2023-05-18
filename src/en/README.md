@@ -40,3 +40,5 @@ projects:
 
 footer: customize your footer text
 ---
+
+English not support!
