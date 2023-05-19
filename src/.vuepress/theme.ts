@@ -1,7 +1,7 @@
 //主题配置
 import { hopeTheme } from "vuepress-theme-hope";
-import { enNavbar, zhNavbar } from "./navbar/index.js";
-import { enSidebar, zhSidebar } from "./sidebar/index.js";
+import { zhNavbar } from "./navbar/index.js";
+import { zhSidebar } from "./sidebar/index.js";
 
 export default hopeTheme({
   hostname: "https://github.com/Leopan0",
@@ -36,9 +36,9 @@ export default hopeTheme({
   locales: {
     "/": {
       // 导航栏
-      navbar: enNavbar,    
+      navbar: zhNavbar,    
       // 侧边栏
-      sidebar: enSidebar,
+      sidebar: zhSidebar,
       //路径导航
       breadcrumb: true, 
 
@@ -60,7 +60,6 @@ export default hopeTheme({
   encrypt: {
     config: {
       "/demo/": ["1234"],
-      "/en": ["1234"],
     },
   },
   
@@ -77,7 +76,6 @@ export default hopeTheme({
       chart: true,
       demo: true,
       echarts: true,
-      figure: true,
       gfm: true,
       include: true,
       katex: true,
@@ -109,8 +107,9 @@ export default hopeTheme({
       attrs:false,
       mark:true,
       //图片 详情查看
-      imgLazyload:true,
-      imgMark:true,
+      imgLazyload:false,
+      imgMark:false,
+      figure: false,
       //markdown 卡片
       card:true,
       //幻灯片功能
