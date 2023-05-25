@@ -8,38 +8,16 @@ export const zhNavbar = navbar([
     prefix: "/zh/后端/",
     children: [
       {
-        text: "Java",
-        icon: "edit",
-        prefix: "apple/",
-        children: [
-          { text: "苹果1", icon: "edit", link: "1" },
-          { text: "苹果2", icon: "edit", link: "2" },
-        ],
-      },
-      {
-        text: "数据库",
-        icon: "edit",
-        prefix: "apple/",
-        children: [
-          { text: "苹果1", icon: "edit", link: "1" },
-          { text: "苹果2", icon: "edit", link: "2" },
-        ],
-      },
-      {
-        text: "中间件",
-        icon: "edit",
-        prefix: "apple/",
-        children: [
-          { text: "苹果1", icon: "edit", link: "1" },
-          { text: "苹果2", icon: "edit", link: "2" },
-        ],
+        text: "Java技术",
+        icon: "java",
+        link: "Java/"
       },
     ],
   },
   {
     text: "前端",
     icon: "edit",
-    link: "/zh/前端/article",
+    link: "/zh/前端/",
   },
   {
     text: "其他",

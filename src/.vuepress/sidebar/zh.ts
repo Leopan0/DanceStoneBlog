@@ -5,7 +5,7 @@ export const zhSidebar = sidebar({
     "",
     {
       text: "后端",
-      icon: "java",
+      icon: "shell",
       prefix: "zh/后端/",
       link: "",
       children: "structure",

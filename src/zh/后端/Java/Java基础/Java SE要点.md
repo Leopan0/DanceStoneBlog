@@ -1,12 +1,3 @@
----
-title: Java的基础知识
-date: 2023-05-10
-category:
-  - 后端
-tag:
-  - Java
----
-
 # Java SE 要点
 
 ## 枚举
@@ -45,4 +36,9 @@ flag的取值范围如下：
 - `Pattern.MULTILINE`   在这种模式下， `^` 和 `$` 分别匹配一行的开始和结束。此外，`^` 仍然匹配字符串的开始，`$` 也匹配字符串的结束。默认情况下，这两个表达式仅仅匹配字符串的开始和结束。 
 - `Pattern.UNICODE_CASE`     在这个模式下，如果你还启用了CASE_INSENSITIVE标志，那么它会对Unicode字符进行大小写不明感的匹配。默认情况下，大小写不敏感的匹配只适用于US-ASCII字符集。 
 - `Pattern.UNIX_LINES`     在这个模式下，只有'\n'才被认作一行的中止，并且与`.`，`^`，以及`$`进行匹配。
+
+## lamda表达式
+### ParallelStream
+
+​		`parallelStream` 是 Java lamda表达式当中并行流写法，本质上并行方法，效率很高，但是需要注意会产生多线程下的各种问题，比如使用非线程安全的集合类，会导致空指针和数组下标越界等问题。如果使用`.collect`最终将结果收集起来就不会有个这个问题或者使用`CopyOnWriteArrayList`， `CopyOnWriteArraySet` 这类线程安全的集合来避免问题。千万不能使用 `parallelStream` 去循环处理非线程安全的流程。
 
