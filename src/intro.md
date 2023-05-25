@@ -1,6 +1,8 @@
 ---
+
 icon: info
 cover: /assets/images/cover3.jpg
+sticky: 2
 ---
 
 # 介绍页

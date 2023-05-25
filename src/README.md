@@ -3,7 +3,6 @@ home: true
 layout: BlogHome
 icon: home
 title: 主页
-heroImage: /logo.svg
 heroText: 会跳舞的石头的
 heroFullScreen: false
 tagline: 专注于指尖代码

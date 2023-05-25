@@ -4,6 +4,7 @@ index: false
 icon: discover
 category:
   - 使用指南
+article: false
 ---
 
 ## 目录

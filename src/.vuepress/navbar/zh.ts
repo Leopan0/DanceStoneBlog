@@ -5,7 +5,7 @@ export const zhNavbar = navbar([
   {
     text: "后端",
     icon: "edit",
-    prefix: "/zh/服务器端/",
+    prefix: "/zh/后端/",
     children: [
       {
         text: "Java",
@@ -42,8 +42,13 @@ export const zhNavbar = navbar([
     link: "/zh/前端/article",
   },
   {
-    text: "V2 文档",
+    text: "其他",
     icon: "note",
-    link: "https://theme-hope.vuejs.press/zh/",
+    prefix: "/zh/其他/",
+    children: [{
+      text: "程序员建站",
+      icon: "edit",
+      link: "/",
+    },]
   },
 ]);

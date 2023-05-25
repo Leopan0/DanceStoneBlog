@@ -16,7 +16,6 @@ export default hopeTheme({
   },
   //版面设计
   iconAssets: "iconfont",
-  logo: "/logo.svg",
   //地址
   repo: "vuepress-theme-hope/vuepress-theme-hope",
   docsDir: "docs",
@@ -32,7 +31,7 @@ export default hopeTheme({
   backToTop: {
     progress: true
   },
-  //导航配置
+  //语言配置
   locales: {
     "/": {
       // 导航栏
@@ -41,7 +40,6 @@ export default hopeTheme({
       sidebar: zhSidebar,
       //路径导航
       breadcrumb: true, 
-
       footer: "Power By <a href='https://vuepress.vuejs.org/zh'>VuePress</a>",
       displayFooter: true,
       copyright : "MIT Licensed | Copyright <a href='https://github.com/Leopan0'>会跳舞的石头</a>",
@@ -53,13 +51,14 @@ export default hopeTheme({
 
       metaLocales: {
         editLink: "Github上查看",
-      },
+      },      
     },
   },
   //加密路径
   encrypt: {
     config: {
       "/demo/": ["1234"],
+      "/wait/": ["1234"],
     },
   },
   

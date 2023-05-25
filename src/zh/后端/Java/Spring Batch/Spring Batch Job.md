@@ -253,7 +253,7 @@ public JobLauncher jobLauncher() {
 
 这样执行过程变为：
 
-![i9le5z1x7c](img\Spring Batch Job\i9le5z1x7c.png)
+![i9le5z1x7c](img\SpringBatchJob\i9le5z1x7c.png)
 
 ### 运行一个Job
 

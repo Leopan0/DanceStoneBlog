@@ -7,20 +7,10 @@ tag:
 category:
   - Java
 order: 1
+isOriginal: false
 ---
 
 # Spring Batch Java 批处理框架 
-
-
-
-
-
-## 参考
-
-> [Spring Batch(1)——数据批处理概念 (tencent.com)](read://https_cloud.tencent.com/?url=https%3A%2F%2Fcloud.tencent.com%2Fdeveloper%2Farticle%2F1456757)
->
-> [Spring Batch中@StepScope的适用范围及理解_lovepeacee的博客-CSDN博客](https://blog.csdn.net/lovepeacee/article/details/116003392)
-
 
 
 ## Spring Batch 概念
@@ -53,7 +43,7 @@ order: 1
 
 ### Spring Batch结构
 
-![o5rhp13pza](img/Spring Batch/o5rhp13pza.png#结构图)
+![o5rhp13pza](./img/SpringBatch/o5rhp13pza.png)
 
 ​		如上图，通常情况下一个独立的JVM程序就是仅仅用于处理批处理，而不要和其他功能重叠。 在最后一层基础设置（Infrastructure）部分主要分为3个部分。`JobLauncher`、`Job`以及`Step`。每一个`Step`又细分为`ItemReader`、`ItemProcessor`、`ItemWirte`。使用*Spring Batch*主要就是知道每一个基础设置负责的内容，然后在对应的设施中实现对应的业务。
 
@@ -130,7 +120,7 @@ order: 1
 
 下图是批处理的核心流程图。 
 
-![3abuh4rdai](\img\Spring Batch\3abuh4rdai.png)
+![3abuh4rdai](\img\SpringBatch\3abuh4rdai.png)
 
 ​		Spring Batch同样按照批处理的标准实现了各个层级的组件。并且在框架级别保证数据的完整性和事物性。
 
@@ -140,7 +130,7 @@ order: 1
 
 简单的说`Job`是封装一个批处理过程的实体，与其他的Spring项目类似，`Job`可以通过XML或Java类配置，称职为”Job Configuration“.如下图`Job`是单个批处理的最顶层。
 
-![psksp63v9f](\img\Spring Batch\psksp63v9f.png)
+![psksp63v9f](\img\SpringBatch\psksp63v9f.png)
 
 为了便于理解，可以建立的理解为`Job`就是每一步（`Step`）实例的容器。他结合了多个`Step`，为它们提供统一的服务同时也为`Step`提供个性化的服务，比如步骤重启。通常情况下`Job的配置包含以下内容`：
 
@@ -173,7 +163,7 @@ public Job footballJob() {
 
 前面讨论了`JobInstance` 与`Job` 的区别，但是具体的区别内容都是通过`JobParameters `体现的。一个`JobParameters` 对象中包含了一系列Job运行相关的参数，这些参数可以用于参考或者用于实际的业务使用。对应的关系如下图：
 
-![psksp63v9f (1)](\img\Spring Batch\psksp63v9f.png)
+![psksp63v9f (1)](.\img\SpringBatch\psksp63v9f.png)
 
 当我们执行2个不同的`JobInstance`时`JobParameters`中的属性都会有差异。可以简单的认为一个`JobInstance`的标识就是 `Job` + `JobParameters` 。
 
@@ -247,7 +237,7 @@ BATCH_JOB_EXECUTION：
 
 ​		`Step`是批处理重复运行的最小单元，它按照顺序定义了一次执行的必要过程。因此每个`Job`可以视作由一个或多个多个`Step`组成。一个`Step`包含了所有所有进行批处理的必要信息，这些信息的内容是由开发人员决定的并没有统一的标准。一个`Step`可以很简单，也可以很复杂。他可以是复杂业务的组合，也有可能仅仅用于迁移数据。与`JobExecution`的概念类似，`Step`也有特定的`StepExecution`，关系结构如下：
 
-![vgpk2fnaar](\img\Spring Batch\vgpk2fnaar.png)
+![vgpk2fnaar](.\img\SpringBatch\vgpk2fnaar.png)
 
 #### StepExecution
 
@@ -1047,7 +1037,7 @@ public class FlatFileWriter {
 
 在一切都执行完毕之后，框架会使用回调过程调用`ResultSet::close`来关闭游标。由于所有的业务过程都绑定在一个事物之上，所以知道到`Step`执行完毕或异常退出调用执行`close`。下图展示了数据读取的过程：
 
-![c9etsbwt90](\img\Spring Batch\c9etsbwt90.png)
+![c9etsbwt90](.\img\SpringBatch\c9etsbwt90.png)
 
 SQL语句的查询结果称为*数据集*（对于大部分数据库而言，其SQL执行结果会产生临时的表空间索引来存放数据集）。游标开始会停滞在ID=2的位置，一次`ItemReader`执行完毕后会产生对应的实体`FOO2`，然后游标下移直到最后的ID=6。最后关闭游标。
 
@@ -1372,3 +1362,11 @@ public class FileComplexProcessConfig {
     }
 }
 ```
+
+
+
+## 参考
+
+> [Spring Batch(1)——数据批处理概念 (tencent.com)](read://https_cloud.tencent.com/?url=https%3A%2F%2Fcloud.tencent.com%2Fdeveloper%2Farticle%2F1456757)
+>
+> [Spring Batch中@StepScope的适用范围及理解_lovepeacee的博客-CSDN博客](https://blog.csdn.net/lovepeacee/article/details/116003392)

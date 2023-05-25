@@ -5,14 +5,16 @@ import { searchProPlugin } from "vuepress-plugin-search-pro";
 import { searchPlugin } from '@vuepress/plugin-search'
 
 export default defineUserConfig({
+  lang: "zh",
   base: "/",
   locales: {
     "/": {
       lang: "zh-CN",
       title: "会跳舞的石头",
       description: "代码在指尖飞舞",
-    },
+    }
   },
+  
   //主题
   theme,
   //其他插件

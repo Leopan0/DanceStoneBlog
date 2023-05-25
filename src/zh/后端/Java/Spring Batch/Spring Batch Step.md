@@ -19,7 +19,7 @@ order: 2
 
 ​		`Step`是`Job`中的工作单元，每一个`Step`涵盖了单行记录的处理闭环。下图是一个`Step`的简要结构：
 
-![cm9c3yeke6](img/Spring Batch Step/cm9c3yeke6.png)
+![cm9c3yeke6](img/SpringBatchStep/cm9c3yeke6.png)
 
 ​		一个`Step`通常涵盖三个部分：读数据（Reader）、处理数据（Processor）和写数据（Writer）。但是并不是所有的`Step` 都需要自身来完成数据的处理，比如存储过程等方式是通过外部功能来完成，因此Spring Batch提供了2种Step的处理方式：1）面向分片的`ChunkStep`，2）面向过程的`TaskletStep`。但是基本上大部分情况下都是使用面向分片的方式来解决问题。
 
@@ -29,7 +29,7 @@ order: 2
 
 ​		在`Step`中数据是按记录（按行）处理的，但是每条记录处理完毕之后马上提交事物反而会导致IO的巨大压力。因此Spring Batch提供了数据处理的分片功能。设置了分片之后，一次工作会从Read开始，然后交由给Processor处理。处理完毕后会进行聚合，待聚合到一定的数量的数据之后一次性调用Write将数据提交到物理数据库。其过程大致为：
 
-![533zi6afat](img/Spring Batch Step/533zi6afat.png)
+![533zi6afat](img/SpringBatchStep/533zi6afat.png)
 
 在Spring Batch中所谓的事物和数据事物的概念一样，就是一次性提交多少数据。如果在聚合数据期间出现任何错误，所有的这些数据都将不执行写入。
 
@@ -39,13 +39,13 @@ order: 2
 
 Spring Batch也为Step的分区执行和远程执行提供了一个SPI(服务提供者接口)。在这种情况下,远端的执行程序只是一些简单的Step实例,配置和使用方式都和本机处理一样容易。下面是一幅实际的模型示意图:
 
-![partitioning-overview](img/Spring Batch Step/partitioning-overview.png)
+![partitioning-overview](img/SpringBatchStep/partitioning-overview.png)
 
 在左侧执行的作业(Job)是串行的Steps,而中间的那一个Step被标记为 Master。图中的 Slave 都是一个Step的相同实例,对于作业来说,这些Slave的执行结果实际上等价于就是Master的结果。Slaves通常是远程服务,但也有可能是本地执行的其他线程。在此模式中,Master发送给Slave的消息不需要持久化(durable) ,也不要求保证交付: 对每个作业执行步骤来说,保存在 **JobRepository** 中的Spring Batch元信息将确保每个Slave都会且仅会被执行一次。
 
 Spring Batch的SPI由Step的一个专门的实现( **PartitionStep**),以及需要由特定环境实现的两个策略接口组成。这两个策略接口分别是 **PartitionHandler** 和 **StepExecutionSplitter**,他们的角色如下面的序列图所示:此时在右边的Step就是“远程”Slave。
 
-![partitioning-spi](img/Spring Batch Step/partitioning-spi.png)
+![partitioning-spi](img/SpringBatchStep/partitioning-spi.png)
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: Java的冷门知识
+title: Java的基础知识
 date: 2023-05-10
 category:
   - 后端
