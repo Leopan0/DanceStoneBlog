@@ -1,6 +1,10 @@
 ---
 title: Spring 数据验证
 isOriginal: true
+date: 2023-05-25
+tag:
+  - Java
+  - Spring
 ---
 
 # Spring Validation

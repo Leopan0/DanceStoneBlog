@@ -5,7 +5,6 @@ import { searchProPlugin } from "vuepress-plugin-search-pro";
 import { searchPlugin } from '@vuepress/plugin-search'
 
 export default defineUserConfig({
-  lang: "zh",
   base: "/",
   locales: {
     "/": {

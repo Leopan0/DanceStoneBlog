@@ -350,11 +350,11 @@ public interface JobLauncher {
 
 
 
-## [Spring Batch——Step控制](Spring Batch Step.md)
+## [Spring Batch——Step控制](SpringBatchStep.md)
 
 
 
-## [Spring Batch——Job配置与运行](./Spring Batch Job.md)
+## [Spring Batch——Job配置与运行](./SpringBatchJob.md)
 
 
 
