@@ -2,4 +2,4 @@
 User-agent:*
 Disallow:
 
-Sitemap: https://github.com/Leopan0/sitemap.xml
+Sitemap: https://github.com/Leopan0/DanceStoneBlog/sitemap.xml
