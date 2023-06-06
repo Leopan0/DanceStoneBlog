@@ -4,7 +4,7 @@ cd src/.vuepress/dist
 
 git init
 git add -A
-git commit -m 'deploy'
+git commit -m '发布'
 
 git push -u origin deploy
 cd -

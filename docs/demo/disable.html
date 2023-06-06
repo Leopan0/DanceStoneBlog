@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-beta.62" />
+    <meta name="theme" content="VuePress Theme Hope" />
+    <title>布局与功能禁用 | 会跳舞的石头</title><meta name="description" content="代码在指尖飞舞">
+    <style>
+      :root {
+        --bg-color: #fff;
+      }
+
+      html[data-theme="dark"] {
+        --bg-color: #1d1e1f;
+      }
+
+      html,
+      body {
+        background: var(--bg-color);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem("vuepress-theme-hope-scheme");
+      const systemDarkMode =
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      if (userMode === "dark" || (userMode !== "light" && systemDarkMode)) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    </script>
+    <link rel="preload" href="/assets/style-1e09e69d.css" as="style"><link rel="stylesheet" href="/assets/style-1e09e69d.css">
+    <link rel="modulepreload" href="/assets/app-0bb5d51b.js"><link rel="modulepreload" href="/assets/disable.html-4cbfec53.js"><link rel="modulepreload" href="/assets/plugin-vue_export-helper-c27b6911.js"><link rel="modulepreload" href="/assets/disable.html-84a36440.js"><link rel="prefetch" href="/assets/intro.html-c1178126.js" as="script"><link rel="prefetch" href="/assets/index.html-63030937.js" as="script"><link rel="prefetch" href="/assets/encrypt.html-7ea4893c.js" as="script"><link rel="prefetch" href="/assets/markdown.html-b66063f6.js" as="script"><link rel="prefetch" href="/assets/page.html-c24bfc62.js" as="script"><link rel="prefetch" href="/assets/index.html-ec74421c.js" as="script"><link rel="prefetch" href="/assets/index.html-1a909374.js" as="script"><link rel="prefetch" href="/assets/搭建问题.html-3b531940.js" as="script"><link rel="prefetch" href="/assets/index.html-2818f44f.js" as="script"><link rel="prefetch" href="/assets/index.html-5cc8db1c.js" as="script"><link rel="prefetch" href="/assets/Java SE要点.html-58281fe9.js" as="script"><link rel="prefetch" href="/assets/线程池.html-4e36655f.js" as="script"><link rel="prefetch" href="/assets/SpringBatch.html-779a9d67.js" as="script"><link rel="prefetch" href="/assets/SpringBatchJob.html-c5b1e1a4.js" as="script"><link rel="prefetch" href="/assets/SpringBatchStep.html-b4b01376.js" as="script"><link rel="prefetch" href="/assets/Spring.html-b11ea6e2.js" as="script"><link rel="prefetch" href="/assets/Spring数据验证.html-4cd4af84.js" as="script"><link rel="prefetch" href="/assets/Spring状态机.html-b8961080.js" as="script"><link rel="prefetch" href="/assets/web序列化器加载顺序问题.html-5efc0e61.js" as="script"><link rel="prefetch" href="/assets/Spring Data JDBC.html-9d6a3723.js" as="script"><link rel="prefetch" href="/assets/404.html-c264b8d2.js" as="script"><link rel="prefetch" href="/assets/index.html-f18bc77b.js" as="script"><link rel="prefetch" href="/assets/index.html-e0bf3b7f.js" as="script"><link rel="prefetch" href="/assets/index.html-3a9dfb35.js" as="script"><link rel="prefetch" href="/assets/index.html-c146c5f3.js" as="script"><link rel="prefetch" href="/assets/index.html-e9d02432.js" as="script"><link rel="prefetch" href="/assets/index.html-65899871.js" as="script"><link rel="prefetch" href="/assets/index.html-1a18875d.js" as="script"><link rel="prefetch" href="/assets/index.html-e69cfc1b.js" as="script"><link rel="prefetch" href="/assets/index.html-6723cb6a.js" as="script"><link rel="prefetch" href="/assets/index.html-a51b84cd.js" as="script"><link rel="prefetch" href="/assets/index.html-97d8b4d5.js" as="script"><link rel="prefetch" href="/assets/index.html-7a0878ce.js" as="script"><link rel="prefetch" href="/assets/index.html-26e04675.js" as="script"><link rel="prefetch" href="/assets/index.html-989f7efd.js" as="script"><link rel="prefetch" href="/assets/index.html-8b97e876.js" as="script"><link rel="prefetch" href="/assets/index.html-2e01fc36.js" as="script"><link rel="prefetch" href="/assets/index.html-42582ea9.js" as="script"><link rel="prefetch" href="/assets/intro.html-4390984e.js" as="script"><link rel="prefetch" href="/assets/index.html-eeba37e3.js" as="script"><link rel="prefetch" href="/assets/encrypt.html-5829a875.js" as="script"><link rel="prefetch" href="/assets/markdown.html-ffe28b3f.js" as="script"><link rel="prefetch" href="/assets/page.html-8f7ef957.js" as="script"><link rel="prefetch" href="/assets/index.html-a9e1dcbc.js" as="script"><link rel="prefetch" href="/assets/index.html-c9e7d62d.js" as="script"><link rel="prefetch" href="/assets/搭建问题.html-462f14bd.js" as="script"><link rel="prefetch" href="/assets/index.html-98fff9b0.js" as="script"><link rel="prefetch" href="/assets/index.html-fe423cc0.js" as="script"><link rel="prefetch" href="/assets/Java SE要点.html-66ab590a.js" as="script"><link rel="prefetch" href="/assets/线程池.html-ce18e8f3.js" as="script"><link rel="prefetch" href="/assets/SpringBatch.html-fe5452d2.js" as="script"><link rel="prefetch" href="/assets/SpringBatchJob.html-d31a55bb.js" as="script"><link rel="prefetch" href="/assets/SpringBatchStep.html-b035a1c5.js" as="script"><link rel="prefetch" href="/assets/Spring.html-10affc15.js" as="script"><link rel="prefetch" href="/assets/Spring数据验证.html-6743bdaf.js" as="script"><link rel="prefetch" href="/assets/Spring状态机.html-6163ac80.js" as="script"><link rel="prefetch" href="/assets/web序列化器加载顺序问题.html-644172ce.js" as="script"><link rel="prefetch" href="/assets/Spring Data JDBC.html-642266b7.js" as="script"><link rel="prefetch" href="/assets/404.html-c52f27c3.js" as="script"><link rel="prefetch" href="/assets/index.html-7c9518f6.js" as="script"><link rel="prefetch" href="/assets/index.html-e4a66f4a.js" as="script"><link rel="prefetch" href="/assets/index.html-03432197.js" as="script"><link rel="prefetch" href="/assets/index.html-68bd67fb.js" as="script"><link rel="prefetch" href="/assets/index.html-391fa104.js" as="script"><link rel="prefetch" href="/assets/index.html-7a2d0b9c.js" as="script"><link rel="prefetch" href="/assets/index.html-540e0a3d.js" as="script"><link rel="prefetch" href="/assets/index.html-5a6367ef.js" as="script"><link rel="prefetch" href="/assets/index.html-a0a8b4e4.js" as="script"><link rel="prefetch" href="/assets/index.html-c86a095e.js" as="script"><link rel="prefetch" href="/assets/index.html-2641a0b9.js" as="script"><link rel="prefetch" href="/assets/index.html-9a497552.js" as="script"><link rel="prefetch" href="/assets/index.html-11ccbdcc.js" as="script"><link rel="prefetch" href="/assets/index.html-9cc18934.js" as="script"><link rel="prefetch" href="/assets/index.html-15580ed9.js" as="script"><link rel="prefetch" href="/assets/index.html-b09f8240.js" as="script"><link rel="prefetch" href="/assets/index.html-28ab6612.js" as="script"><link rel="prefetch" href="/assets/auto-fa8841cf.js" as="script"><link rel="prefetch" href="/assets/index-ae8c1e74.js" as="script"><link rel="prefetch" href="/assets/mermaid.core-d8a2d487.js" as="script"><link rel="prefetch" href="/assets/VuePlayground-1952fce1.js" as="script"><link rel="prefetch" href="/assets/photoswipe.esm-2450701e.js" as="script"><link rel="prefetch" href="/assets/SearchResult-d9d0cbc0.js" as="script">
+  </head>
+  <body>
+    <div id="app"><!--[--><!--[--><!--[--><span tabindex="-1"></span><a href="#main-content" class="skip-link sr-only">跳至主要內容</a><!--]--><div class="theme-container no-navbar no-sidebar has-toc"><!----><!----><div class="toggle-sidebar-wrapper"><span class="arrow start"></span></div><aside class="sidebar" id="sidebar"><!--[--><!----><!--]--><ul class="sidebar-links"></ul><!--[--><!----><!--]--></aside><!--[--><main class="page" id="main-content"><!----></main><!--]--><!----></div><!--]--><!----><!----><!--]--></div>
+    <script type="module" src="/assets/app-0bb5d51b.js" defer></script>
+  </body>
+</html>
