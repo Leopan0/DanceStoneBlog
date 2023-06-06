@@ -24,9 +24,10 @@ export const zhNavbar = navbar([
     icon: "note",
     prefix: "/zh/其他/",
     children: [{
-      text: "程序员建站",
+      text: "搭建问题",
       icon: "edit",
-      link: "/",
-    },]
+      link: "搭建问题",
+    },
+    ]
   },
 ]);

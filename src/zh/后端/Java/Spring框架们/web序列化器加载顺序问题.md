@@ -3,6 +3,7 @@ date: 2023-06-02
 tag:
   - java
   - Spring Web
+isOriginal: true
 ---
 
 # Web序列化器加载顺序问题

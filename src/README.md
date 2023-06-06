@@ -3,7 +3,7 @@ home: true
 layout: BlogHome
 icon: home
 title: 主页
-heroText: 会跳舞的石头的
+heroText: 会跳舞的石头
 heroFullScreen: false
 tagline: 专注于指尖代码
 projects:
