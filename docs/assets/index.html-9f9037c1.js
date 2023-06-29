@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-29e5489c","path":"/wait/%E5%B7%A5%E4%BD%9C%E6%B5%81/","title":"工作流","lang":"zh-CN","frontmatter":{"title":"工作流","article":false,"feed":false,"sitemap":false,"seo":false,"head":[]},"headers":[],"git":{},"readingTime":{"minutes":0,"words":1},"filePathRelative":null,"copyright":{"author":"会跳舞的石头"}}');export{e as data};

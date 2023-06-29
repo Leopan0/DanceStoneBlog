@@ -1,7 +1,7 @@
 ---
 title: Redis与Lua脚本
 isOrigin: false
-description：Lua脚本运用的中间件很多，学习好，能掌握更多技巧
+description: Lua脚本运用的中间件很多，学习好，能掌握更多技巧
 date: 2023-06-07
 tag: 
   - Lua

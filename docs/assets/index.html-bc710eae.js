@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-157d9e01","path":"/wait/","title":"Wait","lang":"zh-CN","frontmatter":{"title":"Wait","article":false,"feed":false,"sitemap":false,"seo":false,"head":[]},"headers":[],"git":{},"readingTime":{"minutes":0,"words":1},"filePathRelative":null,"copyright":{"author":"会跳舞的石头"}}');export{e as data};
