@@ -9,14 +9,16 @@ export const zhNavbar = navbar([
     children: [
       {
         text: "Java技术",
-        icon: "java",
         link: "Java/"
+      },
+      {
+        text: "Java大数据",
+        link: "Java大数据/"
       },
     ],
   },
   {
     text: "前端",
-    icon: "edit",
     link: "/zh/前端/",
   },
   {
